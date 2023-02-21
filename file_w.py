@@ -1,23 +1,22 @@
 def info_get():
     info=[]
-    last_name=input('Enter your last name:')
+    last_name=input('Введите фамилию:')
     info.append(last_name)
-    first_name=input('Enter your first name:')
+    first_name=input('Введите имя:')
     info.append(first_name)
     phone_number=''
     valid=False
     while not valid:
         try:
-            phone_number=input('Enter your phone number:')
+            phone_number=input('Введите ваш номер телефона:')
             if len(phone_number)!=11:
-                print(f"It's not phone number.The phone number must consist of 11 symbol!")
+                print(f"Вы ввели не корректный номер телефона!\nОн должен состоять из 11 цифр.")
             else:
-                phone_number = input('Enter your phone number again:')
                 valid=True
         except:
-            print("Can you enter numbers instead of letters?)")
+            print("Попробуйте ввести цифры, а не буквы - должно сработать.")
     info.append(phone_number)
-    description= input("Enter descriptions for your number:")
+    description= input("Введите описание к вашему номеру:")
     info.append(description)
     return info
 
@@ -29,9 +28,9 @@ def writing_scv(info):
 def writing_txt(info):
     file = "PhoneInfo.txt"
     with open(file,'a',encoding="utf-8") as data:
-        data.write(f"Last name: {info[0]}\n\n"
-                   f"First name: {info[1]}\n\n"
-                   f"Phone number: {info[2]}\n\n"
-                   f"Desscription: {info[3]}\n")
+        data.write(f"Фамилия: {info[0]}\n\n"
+                   f"Имя: {info[1]}\n\n"
+                   f"Номер телефона: {info[2]}\n\n"
+                   f"Описание: {info[3]}\n\n\n")
 
 
