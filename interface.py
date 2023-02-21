@@ -1,3 +1,4 @@
+import pathlib
 from os.path import exists
 from scv_file import creating
 from file_w import*
@@ -17,9 +18,7 @@ def record_info():
 
 def replace_info():
     replace()
-
-def delete_info():
-    delete()
+    record_info()
 
 def choice():
     flag = input("Для работы напиши \'да\', или любой символ для конца работы...\n ")
@@ -35,12 +34,17 @@ def choice():
             view()
         choice_delete_replace=input('Если вы хотите удалить данные напишите - \'удалить\'\n'
                                     'Если вы хотите изменить файл напишите - \'изменить\'\n'
-                                    'Или введите любой симовл для возврата в начало.')
+                                    'Или введите любой симовл для возврата в начало.\n')
         if choice_delete_replace.lower()=='удалить':
-            delete_info()
+            file = pathlib.Path("PhoneInfo.txt")
+            file.unlink()
+            file = pathlib.Path("Phoneinfo.csv")
+            file.unlink()
+            file = pathlib.Path("PhoneInfo.scv")
+            file.unlink()
+            print("Все ваши файлы были удалены!")
         elif choice_delete_replace.lower()=='удалить':
             replace_info()
-            record_info()
         else:
             view()
 
