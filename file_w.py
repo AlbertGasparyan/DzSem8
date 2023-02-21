@@ -32,6 +32,6 @@ def writing_txt(info):
         data.write(f"Last name: {info[0]}\n\n"
                    f"First name: {info[1]}\n\n"
                    f"Phone number: {info[2]}\n\n"
-                   f"Desscription: {info[3]}\n\n\n")
+                   f"Desscription: {info[3]}")
 
 

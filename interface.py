@@ -15,9 +15,6 @@ def record_info():
     writing_txt(info)
     writing_scv(info)
 
-def replace_info():
-    replace()
-    record_info()
 
 def choice():
     flag = input("Для работы напиши \'да\', или любой символ для конца работы...\n ")
@@ -42,8 +39,8 @@ def choice():
             file = pathlib.Path("PhoneInfo.scv")
             file.unlink()
             print("Все ваши файлы были удалены!")
-        elif choice_delete_replace.lower()=='удалить':
-            replace_info()
+        elif choice_delete_replace.lower()=='изменить':
+            replace()
         else:
             view()
 
