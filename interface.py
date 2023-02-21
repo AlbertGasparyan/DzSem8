@@ -17,8 +17,8 @@ def record_info():
 
 
 def choice():
-    flag = input("Для работы напиши \'да\', или любой символ для конца работы...\n ")
-    while flag.lower()=='да':
+    flag = input("Для работы напиши \'пуск\', или любой символ для конца работы...\n ")
+    while flag.lower()=='пуск':
         path = "PhoneInfo.scv"
         valid = exists(path)
         if not valid:
@@ -44,7 +44,7 @@ def choice():
         else:
             view()
 
-        flag=input("Для работы напиши \'да\', или любой символ для конца работы...\n ")
+        flag=input("Для работы напиши \'пуск\', или любой символ для конца работы...\n ")
     print("Конец работы")
 
 
