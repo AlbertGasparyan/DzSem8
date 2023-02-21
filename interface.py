@@ -3,7 +3,6 @@ from os.path import exists
 from scv_file import creating
 from file_w import*
 from export import from_file
-from delete_file import delete
 from replace_file import replace
 
 
