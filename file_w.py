@@ -33,3 +33,5 @@ def writing_txt(info):
                    f"First name: {info[1]}\n\n"
                    f"Phone number: {info[2]}\n\n"
                    f"Desscription: {info[3]}\n\n\n")
+
+
