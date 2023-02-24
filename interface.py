@@ -23,7 +23,8 @@ def choice():
         valid = exists(path)
         if not valid:
             creating()
-        choice_action=input("Введите \'да\', если хотите записать новые данные\n")
+        choice_action=input("Введите \'да\', если хотите записать новые данные."
+                            "\nИли введите любой символ для возврата на шаг назад...\n")
         if choice_action.lower()=="да":
             record_info()
         else:
